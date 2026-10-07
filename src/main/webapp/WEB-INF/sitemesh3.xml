@@ -1,0 +1,12 @@
+<sitemesh>
+    <!-- Decorator cho User (SiteMesh sẽ tìm trong /WEB-INF/decorators/user.jsp) -->
+    <mapping path="/*" name="user" decorator="user.jsp"/>
+    
+    <!-- Decorator cho Admin (SiteMesh sẽ tìm trong /WEB-INF/decorators/admin.jsp) -->
+    <mapping path="/admin/*" name="admin" decorator="admin.jsp"/>
+    
+    <!-- Các đường dẫn loại trừ -->
+    <mapping path="/assets/*" exclude="true" />
+    <mapping path="/static/*" exclude="true" />
+    <mapping path="/uploads/*" exclude="true" />
+</sitemesh>

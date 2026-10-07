@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+    https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="jpa-hibernate-mysql" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <class>vn.hcmute.entity.User_24133031</class>
+        <class>vn.hcmute.entity.Category_24133031</class>
+        <class>vn.hcmute.entity.Video_24133031</class>
+        <class>vn.hcmute.entity.Share_24133031</class>
+        <class>vn.hcmute.entity.Favorite_24133031</class>
+        <class>vn.hcmute.entity.Product_24133031</class>
+        <class>vn.hcmute.entity.Order_24133031</class>
+        <class>vn.hcmute.entity.OrderItem_24133031</class>
+
+        <properties>
+            <!-- Cấu hình kết nối MySQL UTF-8 tiếng Việt chuẩn -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/web_de03?useSSL=false&amp;serverTimezone=Asia/Ho_Chi_Minh&amp;allowPublicKeyRetrieval=true&amp;characterEncoding=UTF-8&amp;useUnicode=true" />
+            <property name="jakarta.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.password" value="root" />
+
+            <!-- Hibernate Dialect & Logging -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.connection.characterEncoding" value="UTF-8" />
+            <property name="hibernate.connection.charSet" value="UTF-8" />
+            <property name="hibernate.connection.useUnicode" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
